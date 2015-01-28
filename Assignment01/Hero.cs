@@ -38,14 +38,29 @@ namespace Assignment01
 
         }
 
-        public bool hitAttempt()
+        public void hitAttempt(bool hit)
         {
-
-
+            if (hit == true)
+            {
+                hitDamage();
+            }
+            
         }
 
-        private bool hitAttempt()
+        private void hitAttempt()
         {
+
+            int rndHit;
+            rndHit = rnd.Next(1, 10);
+            if (rndHit <= 2)
+            {
+                hitAttempt(true);
+            }
+            else
+            {
+                hitAttempt(false);
+                
+            }
 
         }
 
