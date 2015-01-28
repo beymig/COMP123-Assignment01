@@ -10,7 +10,9 @@ namespace Assignment01
     {
         static void Main(string[] args)
         {
-
+            Hero Superman = new Hero("Superman");
+            Superman.show();
+            Superman.hitAttempt(true);
         }
     }
 }

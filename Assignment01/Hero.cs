@@ -45,6 +45,7 @@ namespace Assignment01
                 hitDamage();
                 Console.WriteLine("DAMAGE CAUSED: {0}",hitDamage());
             }
+            hitAttempt();
             
         }
 
