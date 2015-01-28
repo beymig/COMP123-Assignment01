@@ -8,8 +8,9 @@ namespace Assignment01
 {
     class Hero
     {
-
+        //Random class to be used in different methods
         Random rnd = new Random();
+        
         //Private Properties
 
         private int strength;
@@ -26,10 +27,11 @@ namespace Assignment01
             
             this.name = name;
 
-            this.generateAbilities();
+            generateAbilities();
         }
 
-        private void generateAbilities(Random rnd)
+        //Randomly generates Hero Abilities
+        private void generateAbilities()
         {
             
             strength = rnd.Next(1,100);
@@ -38,34 +40,47 @@ namespace Assignment01
 
         }
 
-        public void hitAttempt(bool hit)
+        //Receives value to determine if the villain will be hit by the hero
+        public void fight()
         {
-            if (hit == true)
-            {
-                hitDamage();
-                Console.WriteLine("DAMAGE CAUSED: {0}",hitDamage());
-            }
             hitAttempt();
-            
-        }
 
-        private void hitAttempt()
-        {
-
-            int rndHit;
-            rndHit = rnd.Next(1, 10);
-            if (rndHit <= 2)
+            if (hitAttempt() == true)
             {
-                hitAttempt(true);
+                
+                Console.WriteLine("********************LEX LUTHOR WAS HIT BY SUPERMAN!!! YEEEEI!*******************");
+                hitDamage();
+                Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
+                hitAttempt();
             }
             else
             {
-                hitAttempt(false);
+                Console.WriteLine("-----------------------LEX LUTHOR WASN'T HIT. BUUUUU---------------------------");
+            }
+            
+        }
+
+        //Randomly determines if the villain will be hit
+        private bool hitAttempt()
+        {
+            bool hit;
+            int rndHit;
+            rndHit = rnd.Next(1, 1000);
+            if (rndHit <= 200)
+            {
                 
+                hit = true;
+                return hit;
+            }
+            else
+            {
+                hit = false;
+                return hit;
             }
 
         }
 
+        //Determine the damage occasionated by the hit
         private int hitDamage()
         {
             int damage;
@@ -73,11 +88,12 @@ namespace Assignment01
             return damage;
         }
 
+        //Show the hero abilities
         public void show ()
         {
-            Console.WriteLine("HERO STRENGHT {0}",strength);
-            Console.WriteLine("HERO SPEED {0}", speed);
-            Console.WriteLine("HERO HEALTH {0}", health);
+            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}",strength);
+            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", speed);
+            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", health);
 
         }
     }
