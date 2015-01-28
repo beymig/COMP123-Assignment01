@@ -11,9 +11,9 @@ namespace Assignment01
         
         //Private Properties
 
-        private int strength = 0;
-        private int speed = 0;
-        private int health = 0;
+        private int strength;
+        private int speed;
+        private int health;
 
         //Public Properties
         public string name;
@@ -21,9 +21,9 @@ namespace Assignment01
         //Constructor
         public Hero(string name)
         {
-            this.strength = 0;
-            this.speed = 0;
-            this.health = 0;
+            this.strength = strength;
+            this.speed = speed;
+            this.health = health;
             this.name = name;
 
             this.generateAbilities();
