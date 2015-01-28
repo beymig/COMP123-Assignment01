@@ -41,14 +41,16 @@ namespace Assignment01
             if (hitAttempt() == true)
             {
                 
-                Console.WriteLine("********************SUPERMAN HITS LEX LUTHOR!!! YEEEEI!*******************");
+                Console.WriteLine("******************** SUPERMAN HITS LEX LUTHOR!!! YEEEEI! **********************");
                 hitDamage();
+                Console.WriteLine("***********************************");
                 Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
+                Console.WriteLine("***********************************");
                 hitAttempt();
             }
             else
             {
-                Console.WriteLine("-----------------------SUPERMAN COULDN'T HIT LEX LUTHOR :( BUUUUU---------------------------");
+                Console.WriteLine("------------------SUPERMAN COULDN'T HIT LEX LUTHOR :( BUUUUU--------------------");
             }
             
         }
@@ -56,10 +58,11 @@ namespace Assignment01
         //Show the hero abilities
         public void show()
         {
-            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}", strength);
-            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", speed);
-            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", health);
-
+            Console.WriteLine("***********************************");
+            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}", this.strength);
+            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", this.speed);
+            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", this.health);
+            Console.WriteLine("***********************************");
         }
 
        //Private Methods
@@ -67,9 +70,9 @@ namespace Assignment01
         private void generateAbilities()
         {
 
-            strength = rnd.Next(1, 100);
-            speed = rnd.Next(1, 100);
-            health = rnd.Next(1, 100);
+            this.strength = rnd.Next(1, 100);
+            this.speed = rnd.Next(1, 100);
+            this.health = rnd.Next(1, 100);
 
         }
         //Randomly determines if the villain will be hit
