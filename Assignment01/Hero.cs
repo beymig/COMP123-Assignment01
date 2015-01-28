@@ -21,6 +21,7 @@ namespace Assignment01
         //Public Properties
         public string name;
 
+        //Public Properties
         //Constructor
         public Hero(string name)
         {
@@ -30,15 +31,7 @@ namespace Assignment01
             generateAbilities();
         }
 
-        //Randomly generates Hero Abilities
-        private void generateAbilities()
-        {
-            
-            strength = rnd.Next(1,100);
-            speed = rnd.Next(1, 100);
-            health = rnd.Next(1, 100);
-
-        }
+        
 
         //Receives value to determine if the villain will be hit by the hero
         public void fight()
@@ -48,18 +41,37 @@ namespace Assignment01
             if (hitAttempt() == true)
             {
                 
-                Console.WriteLine("********************LEX LUTHOR WAS HIT BY SUPERMAN!!! YEEEEI!*******************");
+                Console.WriteLine("********************SUPERMAN HITS LEX LUTHOR!!! YEEEEI!*******************");
                 hitDamage();
                 Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
                 hitAttempt();
             }
             else
             {
-                Console.WriteLine("-----------------------LEX LUTHOR WASN'T HIT. BUUUUU---------------------------");
+                Console.WriteLine("-----------------------SUPERMAN COULDN'T HIT LEX LUTHOR :( BUUUUU---------------------------");
             }
             
         }
 
+        //Show the hero abilities
+        public void show()
+        {
+            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}", strength);
+            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", speed);
+            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", health);
+
+        }
+
+       //Private Methods
+        //Randomly generates Hero Abilities
+        private void generateAbilities()
+        {
+
+            strength = rnd.Next(1, 100);
+            speed = rnd.Next(1, 100);
+            health = rnd.Next(1, 100);
+
+        }
         //Randomly determines if the villain will be hit
         private bool hitAttempt()
         {
@@ -88,13 +100,6 @@ namespace Assignment01
             return damage;
         }
 
-        //Show the hero abilities
-        public void show ()
-        {
-            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}",strength);
-            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", speed);
-            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", health);
-
-        }
+        
     }
 }

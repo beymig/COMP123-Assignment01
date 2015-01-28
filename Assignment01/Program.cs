@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Developer: Beymig Munoz Martinez
+// Date Last Modified: Jan 28th 2015
+// Program Description: A program that generates Hero abilities and allows him to hit a villain (or not)
+
+  
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
