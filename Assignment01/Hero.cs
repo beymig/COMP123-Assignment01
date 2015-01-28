@@ -43,6 +43,7 @@ namespace Assignment01
             if (hit == true)
             {
                 hitDamage();
+                Console.WriteLine("DAMAGE CAUSED: {0}",hitDamage());
             }
             
         }
@@ -66,7 +67,9 @@ namespace Assignment01
 
         private int hitDamage()
         {
-
+            int damage;
+            damage = strength * rnd.Next(1, 6);
+            return damage;
         }
 
         public void show ()
