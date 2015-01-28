@@ -12,7 +12,7 @@ namespace Assignment01
         Random rnd = new Random();
         //Private Properties
 
-        private int strength =0;
+        private int strength;
         private int speed;
         private int health;
         
@@ -74,7 +74,9 @@ namespace Assignment01
 
         public void show ()
         {
-
+            Console.WriteLine("HERO STRENGHT {0}",strength);
+            Console.WriteLine("HERO SPEED {0}", speed);
+            Console.WriteLine("HERO HEALTH {0}", health);
 
         }
     }
