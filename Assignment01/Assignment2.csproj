@@ -7,7 +7,7 @@
     <ProjectGuid>{0B799B65-85BC-4CB9-AC15-EFF6A2FB6D55}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Assignment01</RootNamespace>
+    <RootNamespace>Assignment2</RootNamespace>
     <AssemblyName>Assignment01</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -44,6 +44,7 @@
     <Compile Include="Hero.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Super Hero.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
