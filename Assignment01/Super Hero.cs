@@ -157,10 +157,11 @@ namespace Assignment2
         }    
         public void showPowers()
         {
+            Console.WriteLine("***********************************");
             Console.WriteLine("{0}S' SUPER POWER # 1: {1}", this.name, superPowers[0]);
             Console.WriteLine("{0}S' SUPER POWER # 2: {1}", this.name,superPowers[1]);
-            Console.WriteLine("{0}S' SUPER POWER # 3: {1}", this.name,superPowers[2]);    
-            
+            Console.WriteLine("{0}S' SUPER POWER # 3: {1}", this.name,superPowers[2]);
+            Console.WriteLine("***********************************");
         }
             
             }

@@ -49,18 +49,19 @@ namespace Assignment2
                     Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
                     Console.WriteLine("***********************************");
                     hitAttempt();
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
                 }
 
                 if (this.name == "BATMAN")
                 {
-                    Console.WriteLine("******************** {0} HITS THE RIDDLER!!! YEEEEI! **********************", this.name);
+                    Console.WriteLine("******************** {0} HITS THE RIDDLER!!! YEEEEI! ********************", this.name);
                     hitDamage();
                     Console.WriteLine("***********************************");
                     Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
                     Console.WriteLine("***********************************");
                     hitAttempt();
-                    Console.WriteLine("Press any key to continue");
-                    Console.ReadKey();
+                    
                 }
 
             }
@@ -69,13 +70,13 @@ namespace Assignment2
                 if (this.name == "SUPERMAN") 
                 { 
                 Console.WriteLine("------------------{0} COULDN'T HIT LEX LUTHOR :( BUUUUU--------------------",this.name);
-                
+                Console.WriteLine("Press any key to continue");
+                Console.ReadKey();
                 }
                 if (this.name == "BATMAN")
                 {
-                    Console.WriteLine("------------------{0} COULDN'T HIT THE RIDDLER :( BUUUUU--------------------", this.name);
-                    Console.WriteLine("Press any key to continue");
-                    Console.ReadKey();
+                    Console.WriteLine("------------------{0} COULDN'T HIT THE RIDDLER :( BUUUUU------------------", this.name);
+                    
                 }
 
             }
