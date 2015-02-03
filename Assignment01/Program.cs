@@ -16,11 +16,14 @@ namespace Assignment2
         //creates the new hero and calls the required methods
         static void Main(string[] args)
         {
-            Hero Superman = new Hero("Superman");`
+            Hero Superman = new Hero("SUPERMAN");
             Superman.show();
             Superman.fight();
             Console.WriteLine("Press any key to continue");
             Console.ReadKey();
+            Super_Hero Batman = new Super_Hero("BATMAN");
+            Batman.showPowers();
+            Batman.fight();
         }
     }
 }

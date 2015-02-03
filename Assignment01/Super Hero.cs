@@ -19,6 +19,7 @@ namespace Assignment2
             this.generateRandomPowers();
             
             
+            
         }
 
         private string [] generateRandomPowers()
@@ -28,12 +29,12 @@ namespace Assignment2
             int rndsp2 = 0;
             int rndsp3 = 0;
             int noRepeatPower = 0;
-             
+            
             
             
             while (noRepeatPower <=3)
             {
-                rndsp = rnd.Next(1, 6);
+                rndsp = rnd.Next(1, 7);
                 noRepeatPower++;
                 if (noRepeatPower == 1)
                 {
@@ -44,9 +45,9 @@ namespace Assignment2
                     rndsp2 = rndsp;
                     if (rndsp1 == rndsp2)
                     {
-                    for (rndsp2 = 0;rndsp2 == rndsp1;)
+                    for (rndsp2 = rndsp2;rndsp2 == rndsp1;)
                     {
-                        rndsp2  = rnd.Next(1, 6);
+                        rndsp2  = rnd.Next(1, 7);
                     }
                         }
                     
@@ -56,22 +57,29 @@ namespace Assignment2
                if (noRepeatPower == 3)
                 {
                     rndsp3 = rndsp;
-                    if (rndsp3 == rndsp1)  
+                    
+                    if (rndsp3 == rndsp1)
+                        
                     {
-                    for (rndsp3 = 0;rndsp3 == rndsp1;)
+                    for (rndsp3=rndsp3;rndsp3 == rndsp1;)
                     {
-                        rndsp3  = rnd.Next(1, 6);
+                        rndsp3  = rnd.Next(1, 7);
+                        
                     }
                         }
-                   if (rndsp3 == rndsp2)  
+                   if (rndsp3 == rndsp2)
+                       Console.WriteLine("3 if 2 {0}", rndsp3);
                     {
-                    for (rndsp3 = 0;rndsp3 == rndsp2;)
+                    for (rndsp3 = rndsp3;rndsp3 == rndsp2;)
                     {
-                        rndsp3  = rnd.Next(1, 6);
+                        rndsp3  = rnd.Next(1, 7);
+                        
                     }
                         }
                 }
                 }
+
+            
             switch (rndsp1)
             {
                 case 1:
@@ -95,7 +103,7 @@ namespace Assignment2
                 
 
             }
-
+            
             switch (rndsp2)
             {
                 case 1:
@@ -143,12 +151,16 @@ namespace Assignment2
 
 
             }
+            
             return superPowers;
 
         }    
         public void showPowers()
-        { 
-        
+        {
+            Console.WriteLine("{0}S' SUPER POWER # 1: {1}", this.name, superPowers[0]);
+            Console.WriteLine("{0}S' SUPER POWER # 2: {1}", this.name,superPowers[1]);
+            Console.WriteLine("{0}S' SUPER POWER # 3: {1}", this.name,superPowers[2]);    
+            
         }
             
             }

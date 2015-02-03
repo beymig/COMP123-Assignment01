@@ -40,17 +40,44 @@ namespace Assignment2
 
             if (hitAttempt() == true)
             {
-                
-                Console.WriteLine("******************** SUPERMAN HITS LEX LUTHOR!!! YEEEEI! **********************");
-                hitDamage();
-                Console.WriteLine("***********************************");
-                Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
-                Console.WriteLine("***********************************");
-                hitAttempt();
+
+                if (this.name == "SUPERMAN")
+                {
+                    Console.WriteLine("******************** {0} HITS LEX LUTHOR!!! YEEEEI! **********************", this.name);
+                    hitDamage();
+                    Console.WriteLine("***********************************");
+                    Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
+                    Console.WriteLine("***********************************");
+                    hitAttempt();
+                }
+
+                if (this.name == "BATMAN")
+                {
+                    Console.WriteLine("******************** {0} HITS THE RIDDLER!!! YEEEEI! **********************", this.name);
+                    hitDamage();
+                    Console.WriteLine("***********************************");
+                    Console.WriteLine("DAMAGE CAUSED ----------------> {0}", hitDamage());
+                    Console.WriteLine("***********************************");
+                    hitAttempt();
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
+                }
+
             }
             else
             {
-                Console.WriteLine("------------------SUPERMAN COULDN'T HIT LEX LUTHOR :( BUUUUU--------------------");
+                if (this.name == "SUPERMAN") 
+                { 
+                Console.WriteLine("------------------{0} COULDN'T HIT LEX LUTHOR :( BUUUUU--------------------",this.name);
+                
+                }
+                if (this.name == "BATMAN")
+                {
+                    Console.WriteLine("------------------{0} COULDN'T HIT THE RIDDLER :( BUUUUU--------------------", this.name);
+                    Console.WriteLine("Press any key to continue");
+                    Console.ReadKey();
+                }
+
             }
             
         }
@@ -59,9 +86,9 @@ namespace Assignment2
         public void show()
         {
             Console.WriteLine("***********************************");
-            Console.WriteLine("SUPERMAN STRENGHT ------------> {0}", this.strength);
-            Console.WriteLine("SUPERMAN SPEED ---------------> {0}", this.speed);
-            Console.WriteLine("SUPERMAN HEALTH --------------> {0}", this.health);
+            Console.WriteLine("{0}S' STRENGTH ------------> {1}", this.name, this.strength);
+            Console.WriteLine("{0}S' SPEED ---------------> {1}",this.name, this.speed);
+            Console.WriteLine("{0}S' HEALTH --------------> {1}", this.name,this.health);
             Console.WriteLine("***********************************");
         }
 
@@ -70,9 +97,9 @@ namespace Assignment2
         private void generateAbilities()
         {
 
-            this.strength = rnd.Next(1, 100);
-            this.speed = rnd.Next(1, 100);
-            this.health = rnd.Next(1, 100);
+            this.strength = rnd.Next(1, 101);
+            this.speed = rnd.Next(1, 101);
+            this.health = rnd.Next(1, 101);
 
         }
         //Randomly determines if the villain will be hit
@@ -80,7 +107,7 @@ namespace Assignment2
         {
             bool hit;
             int rndHit;
-            rndHit = rnd.Next(1, 1000);
+            rndHit = rnd.Next(1, 1001);
             if (rndHit <= 200)
             {
                 
@@ -99,7 +126,7 @@ namespace Assignment2
         private int hitDamage()
         {
             int damage;
-            damage = strength * rnd.Next(1, 6);
+            damage = strength * rnd.Next(1, 7);
             return damage;
         }
 
